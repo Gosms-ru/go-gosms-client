@@ -3,7 +3,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/gosms-ru/go-gosms-client.svg)](https://pkg.go.dev/github.com/gosms-ru/go-gosms-client)
 [![Go Report Card](https://img.shields.io/badge/go%20report-A+-brightgreen.svg?style=flat)](https://goreportcard.com/report/github.com/gosms-ru/go-gosms-client)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-v0.0.2-blue.svg)](https://github.com/gosms-ru/go-gosms-client/releases/tag/v0.0.1)
+[![Version](https://img.shields.io/badge/version-v0.0.2-blue.svg)](https://github.com/gosms-ru/go-gosms-client/releases/tag/v0.0.2)
 
 [![Русский](https://img.shields.io/badge/Русский-✓-blue)](#russian)
 [![English](https://img.shields.io/badge/English-✓-green)](#english)
