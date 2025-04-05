@@ -5,8 +5,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-v0.0.1-blue.svg)](https://github.com/Gosms-ru/go-gosms-client/releases/tag/v0.0.1)
 
-[![Русский](https://img.shields.io/badge/Русский-✓-blue)](#gosms-client)
-[![English](https://img.shields.io/badge/English-✓-green)](#gosms-client-1)
+[![Русский](https://img.shields.io/badge/Русский-✓-blue)](#russian)
+[![English](https://img.shields.io/badge/English-✓-green)](#english)
+
+<a name="russian"></a>
+# GoSMS Client
 
 Go-клиент для работы с API GoSMS. Этот SDK позволяет отправлять SMS, получать информацию о них, удалять их, а также управлять устройствами через API GoSMS.
 
@@ -36,10 +39,10 @@ Go-клиент для работы с API GoSMS. Этот SDK позволяе�
 
 ```bash
 # Установка последней версии
-go get github.com/gosms/go-gosms-client
+go get github.com/Gosms-ru/go-gosms-client
 
 # Установка с обновлением всех зависимостей до последних версий
-go get -u github.com/gosms/go-gosms-client
+go get -u github.com/Gosms-ru/go-gosms-client
 ```
 
 ## Настройка
@@ -47,7 +50,7 @@ go get -u github.com/gosms/go-gosms-client
 Для использования SDK вам потребуется токен доступа к API GoSMS. Получить его можно в [панели управления GoSMS](https://cms.gosms.ru/).
 
 ```go
-import "github.com/gosms/go-gosms-client"
+import "github.com/Gosms-ru/go-gosms-client"
 
 // Создаем клиент с вашим токеном
 client := gosms.NewClient("ваш-токен")
@@ -64,7 +67,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -99,7 +102,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -141,7 +144,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -172,7 +175,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -224,7 +227,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -268,7 +271,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -300,7 +303,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/gosms/go-gosms-client"
+    "github.com/Gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -326,4 +329,374 @@ func main() {
 
 SDK возвращает ошибки в формате `error`, которые можно обработать с помощью стандартных механизмов Go:
 
+```go
+response, err := client.SendSMS(req)
+if err != nil {
+    // Обработка ошибки
+    log.Fatalf("Ошибка: %v", err)
+}
 ```
+
+## Тестирование
+
+Для запуска тестов используйте команду:
+
+```bash
+go test -v
+```
+
+## Документация
+
+Для получения токена и подробной информации об API посетите [документацию GoSMS](https://docs.gosms.ru/).
+
+## Лицензия
+
+[MIT](LICENSE)
+
+---
+
+<a name="english"></a>
+# GoSMS Client (English)
+
+
+Go client for working with the GoSMS API. This SDK allows you to send SMS, retrieve information about them, delete them, and manage devices through the GoSMS API.
+
+## Requirements
+
+- Go >= 1.21
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+  - [Sending SMS](#sending-sms)
+  - [Getting SMS Information](#getting-sms-information)
+  - [Deleting SMS](#deleting-sms)
+  - [Getting SMS List](#getting-sms-list)
+  - [Working with Devices](#working-with-devices)
+    - [Getting Device Information](#getting-device-information)
+    - [Editing Device](#editing-device)
+    - [Deleting Device](#deleting-device)
+- [Error Handling](#error-handling)
+- [Testing](#testing)
+- [Documentation](#documentation)
+- [License](#license)
+
+## Installation
+
+```bash
+# Install the latest version
+go get github.com/Gosms-ru/go-gosms-client
+
+# Install with updating all dependencies to their latest versions
+go get -u github.com/Gosms-ru/go-gosms-client
+```
+
+## Configuration
+
+To use the SDK, you need an access token for the GoSMS API. You can get it in the [GoSMS control panel](https://cms.gosms.ru/).
+
+```go
+import "github.com/Gosms-ru/go-gosms-client"
+
+// Create a client with your token
+client := gosms.NewClient("your-token")
+```
+
+## Usage
+
+### Sending SMS
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to send SMS
+    req := gosms.SendSMSRequest{
+        Message:     "Test message",
+        PhoneNumber: "79999999999",
+        DeviceID:    "device-id",     // optional
+        ToSim:       1,               // optional
+        CallbackID:  "callback-id",   // optional
+    }
+    
+    // Send SMS
+    response, err := client.SendSMS(req)
+    if err != nil {
+        log.Fatalf("Error sending SMS: %v", err)
+    }
+    
+    fmt.Printf("SMS sent, ID: %s\n", response.ID)
+}
+```
+
+### Getting SMS Information
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to get SMS information
+    req := gosms.GetSMSRequest{
+        ID: "6654a4e8f1527149588c89f2",
+    }
+    
+    // Get SMS information
+    response, err := client.GetSMS(req)
+    if err != nil {
+        log.Fatalf("Error getting SMS information: %v", err)
+    }
+    
+    fmt.Printf("SMS Information:\n")
+    fmt.Printf("ID: %s\n", response.ID)
+    fmt.Printf("Message: %s\n", response.Message)
+    fmt.Printf("Status: %d\n", response.Status)
+    fmt.Printf("Message Status: %s\n", response.MessageStatus)
+    fmt.Printf("Phone Number: %s\n", response.PhoneNumber)
+    fmt.Printf("Device ID: %s\n", response.DeviceID)
+    fmt.Printf("Callback ID: %s\n", response.CallbackID)
+    fmt.Printf("Creation Time: %d\n", response.TimeCreate)
+    if response.ToSim != nil {
+        fmt.Printf("SIM Number: %d\n", *response.ToSim)
+    }
+}
+```
+
+### Deleting SMS
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to delete SMS
+    req := gosms.DeleteSMSRequest{
+        ID: "6654a4e8f1527149588c89f2",
+    }
+    
+    // Delete SMS
+    err := client.DeleteSMS(req)
+    if err != nil {
+        log.Fatalf("Error deleting SMS: %v", err)
+    }
+    
+    fmt.Println("SMS successfully deleted")
+}
+```
+
+### Getting SMS List
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to get SMS list
+    req := gosms.ListSMSRequest{
+        Limit:  5,                // required field, from 1 to 100
+        Offset: 1,                // optional, default is 1
+        Search: "79999999999",    // optional, search by phone number
+    }
+    
+    // Get SMS list
+    response, err := client.ListSMS(req)
+    if err != nil {
+        log.Fatalf("Error getting SMS list: %v", err)
+    }
+    
+    fmt.Printf("Total records: %d\n", response.Pagination.TotalRecords)
+    fmt.Printf("Current page: %d\n", response.Pagination.Offset)
+    fmt.Printf("Records per page: %d\n\n", response.Pagination.Limit)
+    
+    for _, sms := range response.SMSList {
+        fmt.Printf("ID: %s\n", sms.ID)
+        fmt.Printf("Message: %s\n", sms.Message)
+        fmt.Printf("Status: %d\n", sms.Status)
+        fmt.Printf("Message Status: %s\n", sms.MessageStatus)
+        fmt.Printf("Phone Number: %s\n", sms.PhoneNumber)
+        fmt.Printf("Device ID: %s\n", sms.DeviceID)
+        fmt.Printf("Callback ID: %s\n", sms.CallbackID)
+        fmt.Printf("Creation Time: %d\n", sms.TimeCreate)
+        if sms.ToSim != nil {
+            fmt.Printf("SIM Number: %d\n", *sms.ToSim)
+        }
+        fmt.Println("---")
+    }
+}
+```
+
+### Working with Devices
+
+#### Getting Device Information
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to get device information
+    req := gosms.GetDeviceInfoRequest{
+        DeviceID: "b1277815-fb6f-45e4-b87b-8dfb86b8f0a2",
+    }
+    
+    // Get device information
+    response, err := client.GetDeviceInfo(req)
+    if err != nil {
+        log.Fatalf("Error getting device information: %v", err)
+    }
+    
+    fmt.Printf("Device ID: %s\n", response.DeviceID)
+    fmt.Printf("Battery Level: %d%%\n", response.DeviceBatteryState)
+    fmt.Printf("Device Name: %s\n", response.DeviceName)
+    fmt.Printf("Is Active: %v\n", response.IsActive)
+    fmt.Printf("Is Charging: %v\n", response.IsCharging)
+    fmt.Printf("Last Online: %s\n", response.LastOnlineDate)
+    fmt.Printf("Device Type: %s\n", response.DeviceNameType)
+    fmt.Printf("Low Battery Alert: %v\n", response.LowBatteryAlert)
+    fmt.Printf("Default SIM: %d\n", response.ToSim)
+    
+    fmt.Println("\nSIM Cards List:")
+    for _, sim := range response.SimList {
+        fmt.Printf("Slot %d: %s\n", sim.SlotIndex, sim.DisplayName)
+    }
+}
+```
+
+#### Editing Device
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to edit device
+    req := gosms.EditDeviceRequest{
+        DeviceID: "b1277815-fb6f-45e4-b87b-8dfb86b8f0a2",
+        IsActive: true, // enable SMS sending
+    }
+    
+    // Edit device
+    err := client.EditDevice(req)
+    if err != nil {
+        log.Fatalf("Error editing device: %v", err)
+    }
+    
+    fmt.Println("Device successfully edited")
+}
+```
+
+#### Deleting Device
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+    
+    "github.com/Gosms-ru/go-gosms-client"
+)
+
+func main() {
+    // Create a client with your token
+    client := gosms.NewClient("your-token")
+    
+    // Create a request to delete device
+    req := gosms.DeleteDeviceRequest{
+        DeviceID: "b1277815-fb6f-45e4-b87b-8dfb86b8f0a2",
+    }
+    
+    // Delete device
+    err := client.DeleteDevice(req)
+    if err != nil {
+        log.Fatalf("Error deleting device: %v", err)
+    }
+    
+    fmt.Println("Device successfully deleted")
+}
+```
+
+## Error Handling
+
+The SDK returns errors in the `error` format, which can be handled using standard Go mechanisms:
+
+```go
+response, err := client.SendSMS(req)
+if err != nil {
+    // Error handling
+    log.Fatalf("Error: %v", err)
+}
+```
+
+## Testing
+
+To run tests, use the command:
+
+```bash
+go test -v
+```
+
+## Documentation
+
+To get a token and detailed information about the API, visit the [GoSMS documentation](https://docs.gosms.ru/).
+
+## License
+
+[MIT](LICENSE)
