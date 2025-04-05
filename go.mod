@@ -1,4 +1,4 @@
-module github.com/Gosms-ru/go-gosms-client
+module github.com/gosms-ru/go-gosms-client
 
 go 1.22.0
 

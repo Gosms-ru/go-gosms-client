@@ -1,9 +1,9 @@
 # GoSMS Client
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/Gosms-ru/go-gosms-client.svg)](https://pkg.go.dev/github.com/Gosms-ru/go-gosms-client)
-[![Go Report Card](https://goreportcard.com/badge/github.com/Gosms-ru/go-gosms-client)](https://goreportcard.com/report/github.com/Gosms-ru/go-gosms-client)
+[![Go Reference](https://pkg.go.dev/badge/github.com/gosms-ru/go-gosms-client.svg)](https://pkg.go.dev/github.com/gosms-ru/go-gosms-client)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gosms-ru/go-gosms-client)](https://goreportcard.com/report/github.com/gosms-ru/go-gosms-client)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-v0.0.1-blue.svg)](https://github.com/Gosms-ru/go-gosms-client/releases/tag/v0.0.1)
+[![Version](https://img.shields.io/badge/version-v0.0.1-blue.svg)](https://github.com/gosms-ru/go-gosms-client/releases/tag/v0.0.1)
 
 [![Русский](https://img.shields.io/badge/Русский-✓-blue)](#russian)
 [![English](https://img.shields.io/badge/English-✓-green)](#english)
@@ -39,10 +39,10 @@ Go-клиент для работы с API GoSMS. Этот SDK позволяе�
 
 ```bash
 # Установка последней версии
-go get github.com/Gosms-ru/go-gosms-client
+go get github.com/gosms-ru/go-gosms-client
 
 # Установка с обновлением всех зависимостей до последних версий
-go get -u github.com/Gosms-ru/go-gosms-client
+go get -u github.com/gosms-ru/go-gosms-client
 ```
 
 ## Настройка
@@ -50,7 +50,7 @@ go get -u github.com/Gosms-ru/go-gosms-client
 Для использования SDK вам потребуется токен доступа к API GoSMS. Получить его можно в [панели управления GoSMS](https://cms.gosms.ru/).
 
 ```go
-import "github.com/Gosms-ru/go-gosms-client"
+import "github.com/gosms-ru/go-gosms-client"
 
 // Создаем клиент с вашим токеном
 client := gosms.NewClient("ваш-токен")
@@ -67,7 +67,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -102,7 +102,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -144,7 +144,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -175,7 +175,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -227,7 +227,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -271,7 +271,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -303,7 +303,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -356,8 +356,7 @@ go test -v
 ---
 
 <a name="english"></a>
-# GoSMS Client (English)
-
+# GoSMS Client
 
 Go client for working with the GoSMS API. This SDK allows you to send SMS, retrieve information about them, delete them, and manage devices through the GoSMS API.
 
@@ -387,10 +386,10 @@ Go client for working with the GoSMS API. This SDK allows you to send SMS, retri
 
 ```bash
 # Install the latest version
-go get github.com/Gosms-ru/go-gosms-client
+go get github.com/gosms-ru/go-gosms-client
 
 # Install with updating all dependencies to their latest versions
-go get -u github.com/Gosms-ru/go-gosms-client
+go get -u github.com/gosms-ru/go-gosms-client
 ```
 
 ## Configuration
@@ -398,7 +397,7 @@ go get -u github.com/Gosms-ru/go-gosms-client
 To use the SDK, you need an access token for the GoSMS API. You can get it in the [GoSMS control panel](https://cms.gosms.ru/).
 
 ```go
-import "github.com/Gosms-ru/go-gosms-client"
+import "github.com/gosms-ru/go-gosms-client"
 
 // Create a client with your token
 client := gosms.NewClient("your-token")
@@ -415,7 +414,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -450,7 +449,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -492,7 +491,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -523,7 +522,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -575,7 +574,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -619,7 +618,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
@@ -651,7 +650,7 @@ import (
     "fmt"
     "log"
     
-    "github.com/Gosms-ru/go-gosms-client"
+    "github.com/gosms-ru/go-gosms-client"
 )
 
 func main() {
